@@ -7,6 +7,8 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+	'language' => 'ru',
+	//'layout' => 'basic',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -14,7 +16,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'qwe',
+            'cookieValidationKey' => 'uCPuGgmUq-twwcZ2vSY1A9ATy2g5_tbW',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',

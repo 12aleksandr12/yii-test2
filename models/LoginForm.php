@@ -25,22 +25,6 @@ class LoginForm extends Model
      */
     public function rules()
     {
-	/*$this->createTable(
-            'panel_user',
-            [
-                'id'                   => $this->primaryKey(),
-                'auth_key'             => $this->string(32),
-                'password_hash'        => $this->string()->notNull(),
-                'password_reset_token' => $this->string()->unique(),
-                'email'                => $this->string()->notNull()->unique(),
-
-                'status'               => $this->smallInteger()->notNull()->defaultValue(10),
-                'role'               => $this->smallInteger()->notNull(),
-                'created_at'           => $this->integer()->notNull(),
-                'updated_at'           => $this->integer()->notNull(),
-            ]
-            , 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB'
-        );*/
         return [
             // username and password are both required
             [['username', 'password'], 'required'],
