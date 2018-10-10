@@ -12,11 +12,10 @@
 	*/
 	class TestForm extends ActiveRecord
 	{
-		public $name;
-		public $email;
-		public $hash;
 		
-		
+		public static function tableName(){
+			return 'users';
+		}
 		
 		public function rules(){
 			return [

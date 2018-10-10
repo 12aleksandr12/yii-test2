@@ -8,19 +8,25 @@
 	
 	class PostController extends AppController {
 		
+		public static function tableName(){
+			return 'users';
+		}
 		public $layout = 'basic';
-		//m150101_185401_create_news_table;
+		
 		
 		public function actionIndex(){
 			$model = new TestForm();
-			if( $model->load( Yii::$app->request->post() ) ){
 			
-				//debugAll(Yii::$app->request->post());
+			
+			if( $model->load( Yii::$app->request->post() ) ){
+				
+				//debugAll(Yii::$app->request->post()[TestForm]);
+				
 				//die;
-				if( $model->validate() ){
+				if( $model->save() ){
 					Yii::$app->session->setFlash('success', 'Вы успешно зарегистрировались!');
 					return $this->refresh();
-				}else{
+					}else{
 					Yii::$app->session->setFlash('error', 'Ошибка при отправке данных!');
 					
 				}
@@ -53,4 +59,4 @@
 		}
 		
 		
-	}
+	}	
